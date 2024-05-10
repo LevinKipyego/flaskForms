@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="fom.css">
+
+</head>
+<body>
+<form action="" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    </div>
+    <div class="form-group">
+        <label for="radio1">Radio Button 1:</label>
+        <input type="radio" id="radio1" name="radio_input" value="radio1"><br>
+
+        <label for="radio2">Radio Button 2:</label>
+        <input type="radio" id="radio2" name="radio_input" value="radio2"><br> 
+    </div>
+    <div class="form-group">
+         <label for="checkbox">Checkbox:</label>
+         <input type="checkbox" id="checkbox" name="checkbox_input">
+    </div>
+    <div class="form-group">
+        <label for="select">Select:</label>
+        <select id="select" name="select_input">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="textarea">Textarea:</label>
+        <textarea id="textarea" name="textarea_input"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="file">Upload file:</label>
+        <input type="file" class="form-control-file" id="file" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>

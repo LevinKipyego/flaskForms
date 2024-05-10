@@ -1,0 +1,9 @@
+flask
+datetime
+flask_wtf
+wtforms
+werkzeug
+flask_login
+flask_sqlalchemy
+flask_mysqldb
+flask_migrate

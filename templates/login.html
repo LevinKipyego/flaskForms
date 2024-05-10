@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/login/">
+        {{ form.hidden_tag() }}
+        <div>
+          {{ form.name.label }}
+          {{ form.name() }}
+          {% for error in form.name.errors %}
+            <ul> 
+                <li style="color:red;">{{ error }}</li> 
+            {% endfor %}          
+        </div>
+   
+        <div>
+            {{ form.password.label }}
+            {{ form.password(class_='form-control', placeholder='Enter your password', style='padding: 10px;') }}
+            {% for error in form.password.errors %}
+            <ul> 
+                <li style="color:red;">{{ error }}</li> 
+            {% endfor %}     
+            </ul>
+          </div>
+          <div>
+        
+          {{ form.recap() }}
+          {% for error in form.recap.errors %}
+            <ul> <li style="color:red;">{{ error }}</li> 
+          {% endfor %}     
+            </ul>
+        </div>
+        <div>
+          {{ form.submit() }} {{ form.boolean.label }}-{{ form.boolean() }}
+        </div>
+        {% if form.errors %}
+        <ul>
+          {% for error in form.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </form>
+       
+</body>
+</html>

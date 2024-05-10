@@ -1,0 +1,16 @@
+Here are the Flask-WTF fields that correspond to the HTML input types mentioned earlier:
+
+- Text input: `StringField`
+- Password input: `PasswordField`
+- Email input: `EmailField`
+- URL input: `URLField`
+- Number input: `IntegerField`, `DecimalField`, `FloatField`
+- Date input: `DateField`
+- Time input: `TimeField`
+- Date-time input: `DateTimeField`
+- Checkbox input: `BooleanField`
+- Radio buttons: `RadioField`
+- Drop-down select: `SelectField`
+- Text area: `TextAreaField`
+- File input: `FileField`
+- Phone input: There is no specific field for phone input in Flask-WTF, but you can use a `StringField` with a custom validation function to validate phone numbers.
